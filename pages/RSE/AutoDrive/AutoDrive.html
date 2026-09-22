@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </head>
+    <body>          
+        <h1> AutoDrive II Challenge</h1>
+        <img src="/pages/RSE/AutoDrive/prometheus-borealis-aev-autonomous-car-main-800banner.jpg" alt="Promethus Borealis AutoDrive II car">
+        <p>
+            As a member of Michigan Tech's Robotic Systems Enterprise I had the amazing oppurtunity to work on the AutoDrive II challenge. 
+            A 5 year competition between 10 different teams including Prometheus Borealis, the team representing Michigan Technological University. 
+            AutoDrive tasked the different teams with the creation of a Level 4 autonomous  vehicle through modification of a provided Chevy Bolt. 
+        </p>
+        <h2>
+            Perception
+        </h2>
+        <p>
+            AutoDrive development was seperated into multiple different subteams. 
+            Of these were Controls, Mathworks, Project Management, Mapping & Planning, and Perception. 
+            I spent the duration of my time on AutoDrive with the Perception Subteam. 
+            The bulk of our efforts were focused on the localization system, utilizing a Simultaneous Localization and Mapping (SLAM) 
+            algorithm built largelely off of the notion of using identifiable landmarks such as light poles/fixtures to map the 
+            cars relative position. 
+        </p>
+        <h3>
+            Newton's Method
+        </h3>
+        <p>
+            Newton's method is what the Perception subteam decided to name our localization method. 
+            Utilizing the aforementioned light poles, the Newton's method sought to utilize identified and associated poles 
+            Our localization approach utilized the mathematical process by the same name to iteratively determine
+            a closer and closer approximation for the cars position through a linear approximation of the car and light pole system
+            and that systems changing in time. 
+
+            $$Pos=min||A \underline{x_{c}^w}[t]-b||$$
+            $$e(\underline{x_{c}^w}+\Delta\underline{x_{c}^w})-e(\underline{x_{c}^w})=e'(\underline{x_{c}^w})*\Delta\underline{x_{c}^w}$$
+        </p>
+    </body>
+</html>
+
